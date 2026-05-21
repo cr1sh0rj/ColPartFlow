@@ -1,6 +1,7 @@
 .app {
   font-family: 'DM Sans', sans-serif;
-  min-height: 900px;
+  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--color-background-tertiary);
 }
 
@@ -8,7 +9,8 @@
 .screen.active  { display: block; }
 
 .login-wrapper {
-  min-height: 900px;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +138,8 @@
 
 .main-app {
   background: var(--color-background-tertiary);
-  min-height: 900px;
+  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
 }
 
@@ -192,7 +195,8 @@
 
 .layout {
   display: flex;
-  min-height: calc(900px - 56px);
+  min-height: calc(100vh - 56px);
+  min-height: calc(100dvh - 56px);
 }
 
 /* Sidebar */
