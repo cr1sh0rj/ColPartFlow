@@ -1,0 +1,96 @@
+@media (max-width: 768px) {
+  /* App height — use viewport, not fixed 900px */
+  .app,
+  .login-wrapper,
+  .main-app { min-height: 100dvh; }
+
+  .layout { min-height: calc(100dvh - 56px); }
+
+  /* LOGIN */
+  .login-card {
+    width: calc(100% - 32px);
+    padding: 2rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  /* TOPBAR */
+  .topbar { padding: 0 1rem; }
+  .topbar-brand { font-size: 15px; }
+  .user-name { display: none; }
+  .hamburger { display: flex; }
+
+  /* SIDEBAR — slide in from left on mobile */
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    height: calc(100dvh - 56px);
+    width: 240px;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+  }
+  .sidebar.open { transform: translateX(0); }
+
+  /* CONTENT — full width on mobile */
+  .content {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  /* METRICS — 2 columns on mobile */
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* TABLES — horizontal scroll */
+  .table-card { overflow-x: auto; }
+  table { min-width: 520px; }
+
+  /* TABLE HEADER — stack on small screens */
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0.875rem 1rem;
+  }
+
+  /* ACTIONS ROW — wrap */
+  .actions-row {
+    flex-wrap: wrap;
+  }
+  .search-input { width: 100%; }
+
+  /* MODAL overlay — use fixed positioning on mobile */
+  .modal-overlay {
+    position: fixed;
+    padding: 16px;
+    padding-top: 72px;
+    align-items: flex-start;
+  }
+  .modal-box, .modal-box-sm {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+  }
+
+  /* FORM ROWS — single column on mobile */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* NUEVA FACTURA — stacked panels */
+  .fac-two-col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* METRICS — single column on very small screens */
+  .metrics-row { grid-template-columns: 1fr 1fr; }
+  .metric-value { font-size: 18px; }
+
+  /* Topbar user info */
+  .user-role { display: none; }
+}
